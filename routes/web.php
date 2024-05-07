@@ -1,5 +1,6 @@
 <?php
 use App\mydetail;
+use App\descripton;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,8 @@ use App\mydetail;
 Route::get('/', function () {
     $data['info'] = mydetail::find(1);
     $_SESSION['details'] = $data['info'];
+    $data['about'] = descripton::find(1);
+    $_SESSION['description'] = $data['about'];
     return view('index',$data);
 })->name('welcome');
 
