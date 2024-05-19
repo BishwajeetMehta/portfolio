@@ -10,19 +10,19 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{'assets/img/favicon.png'}}" rel="icon">
+  <link href="{{'assets/img/apple-touch-icon.png'}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{'assets/vendor/aos/aos.css'}}" rel="stylesheet">
+  <link href="{{'assets/vendor/bootstrap/css/bootstrap.min.css'}}" rel="stylesheet">
+  <link href="{{'assets/vendor/bootstrap-icons/bootstrap-icons.css'}}" rel="stylesheet">
+  <link href="{{'assets/vendor/boxicons/css/boxicons.min.css'}}" rel="stylesheet">
+  <link href="{{'assets/vendor/glightbox/css/glightbox.min.css'}}" rel="stylesheet">
+  <link href="{{'assets/vendor/swiper/swiper-bundle.min.css'}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -49,11 +49,11 @@
         <img src="assets/img/bishu1.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">{{ $_SESSION['details']->name ? $_SESSION['details']->name :'' }}</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.facebook.com/bishwajeet.mehta.39" target=blank class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://github.com/BishwajeetMehta" target=blank class="facebook"><i class="bx bxl-git"></i></a>
+          <a href="https://www.instagram.com/mehtabishwajeet99/" target=blank class="instagram"><i class="bx bxl-instagram"></i></a>
+          
+          <a href="https://www.linkedin.com/in/bishwajeet-mehta-5b035a307/" target=blank class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -93,7 +93,7 @@
             <img src="assets/img/me1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Laravel Developer &amp; Django Developer.</h3>
+            <h3>{{ $_SESSION['details']->profession ? $_SESSION['details']->profession :'' }}</h3>
             
             <div class="row">
               <div class="col-lg-6">
@@ -164,14 +164,14 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
             <div class="progress">
-              <span class="skill">PHP Laravel <i class="val">70%</i></span>
+              <span class="skill">PHP Laravel <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">Django <i class="val">90%</i></span>
+              <span class="skill">Django <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -233,44 +233,22 @@
         </div>
 
         <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
+        @forelse($User as $usr)
+          <div class="col-lg-" data-aos="fade-up">
+          @forelse($usr->language as $lang)
             <div class="progress">
-              <span class="skill">Nepali <i class="val">90%</i></span>
+              <span class="skill">{{$lang->language}} <i class="val">{{$lang->skill}}%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="{{$lang->skill}}" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <div class="progress">
-              <span class="skill">Hindi <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">English <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-
-            </div>
-            <div class="progress">
-              <span class="skill">Bhojpuri <i class="val">98%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Maithili <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
+            @empty
+              <hr><h2 style="text-align:center;">Poor Language Skill </h2></hr>
+            @endforelse
           </div>
+          @empty
+         @endforelse
 
           
 
@@ -386,18 +364,18 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{'assets/vendor/purecounter/purecounter_vanilla.js'}}"></script>
+  <script src="{{'assets/vendor/aos/aos.js'}}"></script>
+  <script src="{{'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'}}"></script>
+  <script src="{{'assets/vendor/glightbox/js/glightbox.min.js'}}"></script>
+  <script src="{{'assets/vendor/isotope-layout/isotope.pkgd.min.js'}}"></script>
+  <script src="{{'assets/vendor/swiper/swiper-bundle.min.js'}}"></script>
+  <script src="{{'assets/vendor/typed.js/typed.umd.js'}}"></script>
+  <script src="{{'assets/vendor/waypoints/noframework.waypoints.js'}}"></script>
+  <script src="{{'assets/vendor/php-email-form/validate.js'}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{'assets/js/main.js'}}"></script>
 
 </body>
 

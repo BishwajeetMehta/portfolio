@@ -18,7 +18,7 @@ class mydetail extends Seeder
             'name' =>'Bishwajeet Mehta',
             'address' => 'Ashok-vatika Birgunj, Parsa',
             'phone' =>'+977-9824210052',
-            'email' =>'mehtabishwajeet99@gmail.com',
+            'email' =>'Abcphp@gmail.com',
             'age' =>'21',
             'degree' =>'Diploma in Computer Engineering',
             'status' =>'Available',
