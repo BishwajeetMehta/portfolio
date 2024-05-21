@@ -14,7 +14,7 @@ class usercontroller extends Controller
         $_SESSION['details'] = $data['info'];
        
     }
-    
+   
     
     //Display function
     public function disp()
